@@ -31,7 +31,7 @@ Getting Started
 
 Note: $venv is 'your virtual env'
 
-- cd <directory containing this file>
+- cd 'directory_containing_this_file'
 
 # install require packages
 - $venv/bin/python setup.py develop
