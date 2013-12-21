@@ -8,3 +8,4 @@ pyramid_debugtoolbar
 zope.sqlalchemy
 waitress
 mysql-python
+psycopg2

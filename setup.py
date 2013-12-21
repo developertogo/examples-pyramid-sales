@@ -17,6 +17,7 @@ requires = [
     'zope.sqlalchemy',
     'waitress',
     'mysql-python',
+    'psycopg2',
     ]
 
 setup(name='sales',

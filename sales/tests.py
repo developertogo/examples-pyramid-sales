@@ -11,7 +11,9 @@ class TestSalesMonth(unittest.TestCase):
     def setUp(self):
         self.config = testing.setUp()
         from sqlalchemy import create_engine
-        engine = create_engine('mysql://admin:%2F8dm1n@localhost/sales')
+        # mysql config
+        #engine = create_engine('mysql://admin:%2F8dm1n@localhost/sales')
+        engine = create_engine('postgresql+psycopg2://root:root@localhost/sales')
         from sales.models import Base
         from sales.models.sales_month import SalesMonth
         from sales.models import initialize_sql

@@ -3,6 +3,9 @@ MANIFEST.in
 README.txt
 development.ini
 production.ini
+requirements-1.txt
+requirements-prev.txt
+requirements.txt
 setup.cfg
 setup.py
 sales/__init__.py
