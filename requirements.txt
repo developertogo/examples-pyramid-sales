@@ -13,7 +13,7 @@ pyramid-debugtoolbar==1.0.9
 pyramid-mako==0.3.1
 pyramid-tm==0.7
 repoze.lru==0.6
--e git+https://github.com/developertogo/examples-python-pyramid-sales.git@4b6705248970c9da407350538b32243852ea8247#egg=sales-dev
+psycopg2==2.4.5
 transaction==1.4.1
 translationstring==1.1
 venusian==1.0a8
