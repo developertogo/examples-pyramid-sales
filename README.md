@@ -29,7 +29,7 @@ Strategy
 Getting Started
 ---------------
 
-Note: $venv = <your virtual env>
+Note: $venv is 'your virtual env'
 
 - cd <directory containing this file>
 
