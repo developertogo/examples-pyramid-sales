@@ -1,0 +1,12 @@
+0.0
+---
+- Initial version
+
+* Created from Pyramid 'alchemy' scaffold default which uses URL mapping via URL dispatch and persistence via SQLAlchemy
+
+1.0
+---
+- Add a 'Sales Month' linear graph 
+
+* Use d3.js for the graph which does an ajax call to fetch the data from the DB with SQLAlchemy.
+* Created models and views directories to have separate files for each model and view keeping them modular.

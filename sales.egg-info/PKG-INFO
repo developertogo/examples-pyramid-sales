@@ -1,0 +1,73 @@
+Metadata-Version: 1.1
+Name: sales
+Version: 1.0
+Summary: sales
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: Sales App README
+        ================
+        
+        Objective
+        ---------
+        
+        Demonstrate understanding of the working in/out's of the Python Pyrarmid Web Framework with SQLAlchemy.
+        
+        Project
+        -------
+        
+        Display a linear graph of sales over time (y-axis is $, x-axis is month).
+        Create dummy/static data, but load the data via an ajax call.
+        
+        Strategy
+        --------
+        
+        * Select an elegant front end graphic library
+        * Data is randomly auto-generated and stored in the DB
+        * Data will be fetched from DB and pass to the front end for drawing
+        * Unit test the workflow
+        * Setup Pyramid directory structure for models and views so that new functionality is easily added
+        
+        Getting Started
+        ---------------
+        
+        note: $venv = <your virtual env>
+        
+        - cd <directory containing this file>
+        
+        # install require packages
+        - $venv/bin/python setup.py develop
+        
+        # initialize the db creating a 'sales_month' table if it does not exist
+        # and inserting random values
+        - $venv/bin/initialize_sales_db development.ini
+        
+        # run the unitest
+        - $venv/bin/python setup.py test -q
+        
+        # start app
+        - $venv/bin/pserve development.ini
+        
+        Using d3.js to display the sales-month line graph
+        
+        
+        0.0
+        ---
+        - Initial version
+        
+        * Created from Pyramid 'alchemy' scaffold default which uses URL mapping via URL dispatch and persistence via SQLAlchemy
+        
+        1.0
+        ---
+        - Add a 'Sales Month' linear graph 
+        
+        * Use d3.js for the graph which does an ajax call to fetch the data from the DB with SQLAlchemy.
+        * Created models and views directories to have separate files for each model and view keeping them modular.
+        
+Keywords: web wsgi bfg pylons pyramid
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Pyramid
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application

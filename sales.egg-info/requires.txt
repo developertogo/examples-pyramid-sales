@@ -1,0 +1,10 @@
+pyramid_chameleon
+pyramid_mako
+pyramid
+SQLAlchemy
+transaction
+pyramid_tm
+pyramid_debugtoolbar
+zope.sqlalchemy
+waitress
+mysql-python
