@@ -26,7 +26,7 @@ Getting Started
 
 Note: $venv = <your virtual env>
 
-- cd <directory containing this file>
+- cd <directory to this app>
 
 # install require packages
 - $venv/bin/python setup.py develop

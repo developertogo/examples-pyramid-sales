@@ -4,6 +4,7 @@ README.txt
 development.ini
 production.ini
 requirements-1.txt
+requirements-2.txt
 requirements-prev.txt
 requirements.txt
 setup.cfg
