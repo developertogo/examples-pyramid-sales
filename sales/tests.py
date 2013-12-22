@@ -3,6 +3,7 @@ import datetime
 import math
 import random
 import transaction
+import ConfigParser
 
 from pyramid import testing
 from sales.models import DBSession
@@ -11,9 +12,20 @@ class TestSalesMonth(unittest.TestCase):
     def setUp(self):
         self.config = testing.setUp()
         from sqlalchemy import create_engine
-        # mysql config
-        #engine = create_engine('mysql://admin:%2F8dm1n@localhost/sales')
-        engine = create_engine('postgresql+psycopg2://root:root@localhost/sales')
+
+        # get sqlalchemy url var      
+        basePath = '.'
+        configurationPath = 'development.ini'
+        defaultByKey = {'here': basePath}
+        configParser = ConfigParser.ConfigParser(defaultByKey)
+        if not configParser.read(configurationPath):
+            raise ConfigParser.Error('Could not open %s' % configurationPath)
+        settings = {}
+        for key, value in configParser.items('app:main'):
+            if 'sqlalchemy.url' == key:
+                settings[key] = value
+
+        engine = create_engine(settings['sqlalchemy.url'])
         from sales.models import Base
         from sales.models.sales_month import SalesMonth
         from sales.models import initialize_sql
