@@ -24,7 +24,7 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
     config.scan('sales.models')
     if 'DATABASE_URL' in os.environ:
-        enging = create_engine(os.environ['DATABASE_URL'])
+        engine = create_engine(os.environ['DATABASE_URL'])
     else:
         engine = engine_from_config(settings, 'sqlalchemy.')
     initialize_sql(engine)
