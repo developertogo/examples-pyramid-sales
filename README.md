@@ -22,12 +22,13 @@ Create dummy/static data, but load the data via an ajax call.
 Strategy
 --------
 
-*   Select an elegant front end graphic library
+*   Select an elegant front end graphic library, d3.js
 *   Data is randomly auto-generated and stored in the DB
 *   Data is fetched via an ajax call, e.g. http://pyramid-sales.herokuapp.com/sales_month, 
     to select the data from DB and pass to the front end for display
 *   Unit test the workflow
 *   Setup Pyramid directory structure for models and views so that new functionality is easily added
+*   Select Mako templating for its inherintance features
 *   Deploy app to Heroku with a Postgres Add-on
 
 Getting Started
