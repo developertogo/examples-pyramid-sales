@@ -1,7 +1,9 @@
 examples-python-pyramid-sales
 =============================
 
-d3.js linear graph of 'Sales over Month' data fetched from a web server running Pyramid with SQLAlchemy connected to a mySQL DB.
+d3.js linear graph of 'Sales over Month' data fetched from a web server running Pyramid with SQLAlchemy ORM connected to a PostgreSQL DB.
+
+Go to: http://pyramid-sales.herokuapp.com/ to see the app in action.
 
 Sales over Month App - README
 =============================
@@ -9,7 +11,7 @@ Sales over Month App - README
 Objective
 ---------
 
-Demonstrate understanding of the working in/out's of the Python Pyrarmid Web Framework with SQLAlchemy.
+Demonstrate understanding of the in/out's workings of the Python Pyrarmid Web Framework with SQLAlchemy.
 
 Project
 -------
@@ -20,30 +22,32 @@ Create dummy/static data, but load the data via an ajax call.
 Strategy
 --------
 
-* Select an elegant front end graphic library
-* Data is randomly auto-generated and stored in the DB
-* Data will be fetched from DB and pass to the front end for display
-* Unit test the workflow
+*   Select an elegant front end graphic library
+*   Data is randomly auto-generated and stored in the DB
+*   Data is fetched via an ajax call, e.g. http://pyramid-sales.herokuapp.com/sales_month, 
+    to select the data from DB and pass to the front end for display
+*   Unit test the workflow
 * Setup Pyramid directory structure for models and views so that new functionality is easily added
 
 Getting Started
 ---------------
 
+* git clone or download it to your local system.
+
 Note: $venv is 'your virtual env'
 
-- cd 'directory_to_this_app'
+* cd 'directory_to_this_app'
 
-# install require packages
-- $venv/bin/python setup.py develop
+*   install require packages
+        $venv/bin/python setup.py develop
 
-# initialize the db creating a 'sales_month' table if it does not exist
-# and inserting random values
-- $venv/bin/initialize_sales_db development.ini
+*   initialize the db creating a 'sales_month' table if it does not exist and inserting random values
+        $venv/bin/initialize_sales_db development.ini
 
-# run the unitest
-- $venv/bin/python setup.py test -q
+*   run the unitest
+        $venv/bin/python setup.py test -q
 
-# start app
-- $venv/bin/pserve development.ini
+* start app
+        $venv/bin/pserve development.ini
 
-Using d3.js to display the sales-month line graph
+Using d3.js to fetch the data via an ajax call and display the sales-month line graph.
