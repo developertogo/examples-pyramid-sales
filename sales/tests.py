@@ -2,6 +2,7 @@ import unittest
 import datetime
 import math
 import random
+import os
 import transaction
 import ConfigParser
 
@@ -13,19 +14,24 @@ class TestSalesMonth(unittest.TestCase):
         self.config = testing.setUp()
         from sqlalchemy import create_engine
 
-        # get sqlalchemy url var      
-        basePath = '.'
-        configurationPath = 'development.ini'
-        defaultByKey = {'here': basePath}
-        configParser = ConfigParser.ConfigParser(defaultByKey)
-        if not configParser.read(configurationPath):
-            raise ConfigParser.Error('Could not open %s' % configurationPath)
-        settings = {}
-        for key, value in configParser.items('app:main'):
-            if 'sqlalchemy.url' == key:
-                settings[key] = value
+        database_url = ''
+        if 'DATABASE_URL' in os.environ:
+            database_url = os.environ['DATABASE_URL']
+        else:
+            # get sqlalchemy url var      
+            basePath = '.'
+            configurationPath = 'development.ini'
+            defaultByKey = {'here': basePath}
+            configParser = ConfigParser.ConfigParser(defaultByKey)
+            if not configParser.read(configurationPath):
+                raise ConfigParser.Error('Could not open %s' % configurationPath)
+            settings = {}
+            for key, value in configParser.items('app:main'):
+                if 'sqlalchemy.url' == key:
+                    settings[key] = value
+            database_url = settings['sqlalchemy.url']
+        engine = create_engine(database_url)
 
-        engine = create_engine(settings['sqlalchemy.url'])
         from sales.models import Base
         from sales.models.sales_month import SalesMonth
         from sales.models import initialize_sql

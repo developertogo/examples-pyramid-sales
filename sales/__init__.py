@@ -22,7 +22,10 @@ def main(global_config, **settings):
     """
     config = Configurator(settings=settings)
     config.scan('sales.models')
-    engine = engine_from_config(settings, 'sqlalchemy.')
+    if 'DATABASE_URL' in os.environ:
+        enging = create_engine(os.environ['DATABASE_URL'])
+    else:
+        engine = engine_from_config(settings, 'sqlalchemy.')
     initialize_sql(engine)
     config.registry.dbmaker = sessionmaker(bind=engine)
     config.add_request_method(db, reify=True)
