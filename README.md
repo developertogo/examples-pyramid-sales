@@ -27,27 +27,32 @@ Strategy
 *   Data is fetched via an ajax call, e.g. http://pyramid-sales.herokuapp.com/sales_month, 
     to select the data from DB and pass to the front end for display
 *   Unit test the workflow
-* Setup Pyramid directory structure for models and views so that new functionality is easily added
+*   Setup Pyramid directory structure for models and views so that new functionality is easily added
+*   Deploy app to Heroku with a Postgres Add-on
 
 Getting Started
 ---------------
 
-* git clone or download it to your local system.
+*   git clone or download it to your local system.
 
 Note: $venv is 'your virtual env'
 
-* cd 'directory_to_this_app'
+*   cd 'directory_to_this_app'
 
 *   install require packages
+*   
         $venv/bin/python setup.py develop
 
 *   initialize the db creating a 'sales_month' table if it does not exist and inserting random values
+    
         $venv/bin/initialize_sales_db development.ini
 
 *   run the unitest
+    
         $venv/bin/python setup.py test -q
 
-* start app
+*   start app
+    
         $venv/bin/pserve development.ini
 
 Using d3.js to fetch the data via an ajax call and display the sales-month line graph.
