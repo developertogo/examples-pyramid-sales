@@ -1,6 +1,7 @@
 import os
 
 from pyramid.config import Configurator
+from sqlalchemy import create_engine
 from sqlalchemy import engine_from_config
 from sqlalchemy.orm import sessionmaker
 from sales.models import initialize_sql
