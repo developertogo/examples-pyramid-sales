@@ -36,12 +36,23 @@ Getting Started
 
 *   git clone or download it to your local system.
 
+*   install & setup postgresql
+   
+        On Ubuntu, you do (use the equivalent cmd in your linux env):
+            sudo apt-get install postgresql
+    
+        Basic setup (create user: root with password: root and database: sales)
+            sudo -u postgres createuser root
+            sudo -u postgres psql
+            postgres=# \password root
+            sudo -u postgres createdb -O root sales
+
 Note: $venv is 'your virtual env'
 
 *   cd 'directory_to_this_app'
 
 *   install require packages
-*   
+  
         $venv/bin/python setup.py develop
 
 *   initialize the db creating a 'sales_month' table if it does not exist and inserting random values
