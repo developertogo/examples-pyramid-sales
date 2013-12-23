@@ -1,0 +1,8 @@
+# EASY-INSTALL-ENTRY-SCRIPT: 'sales==1.0','console_scripts','initialize_sales_db'
+__requires__ = 'sales==1.0'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('sales==1.0', 'console_scripts', 'initialize_sales_db')()
+)

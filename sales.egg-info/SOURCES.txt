@@ -1,6 +1,5 @@
 CHANGES.txt
 MANIFEST.in
-README.txt
 development.ini
 production.ini
 requirements-1.txt

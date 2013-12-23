@@ -57,7 +57,7 @@ Note: $venv is 'your virtual env'
 
 *   initialize the db creating a 'sales_month' table if it does not exist and inserting random values
     
-        $venv/bin/initialize_sales_db development.ini
+        $venv/bin/python initialize_sales_db development.ini
 
 *   run the unitest
     
