@@ -11,7 +11,7 @@ Sales over Month App - README
 Objective
 ---------
 
-Demonstrate understanding of the in/out's workings of the Python Pyrarmid Web Framework with SQLAlchemy.
+Demonstrate understanding of the in/out's workings of the Python [Pyramid Web Framework](http://www.pylonsproject.org/) with SQLAlchemy.)
 
 Project
 -------
